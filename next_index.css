@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgray !important;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+.nav-item a {
+    color: black !important;
+    overflow: hidden;
+}
+
+.header {
+    background-image: linear-gradient(57deg, #00c6a7, #1e4d92);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 83.5%, 0% 100%);
+    
+}
+
+.banner-content {
+    text-align: center;
+    color: whitesmoke;
+}
+
+/*--------------------------start try of nav with span---------------------------*/
+
+.nav-item a span {
+    color: white;
+    display: block;
+    transition: 1s;
+}
+.nav-item a:hover span {
+    transform: translateY(-100%);
+}
+.nav-item a::before {
+    position: relative;
+    content: attr(data-link-alt);
+    top: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+.nav-item a:hover::before {
+    top: 0;
+    opacity: 1;
+}
+
+/*--------------------------end try nav with span---------------------------*/
+
+
+/*--------------------------slideshow---------------------------*/
+
+
+.slideshow {
+    
+    padding-top: 50px;
+    height: 400px;
+    box-sizing: border-box;
+    background-image: linear-gradient(57deg, #1e4d92, #00c6a7);
+    clip-path: polygon(0% 25%, 100% 0px, 100% 100%, 0% 100%);
+    position: relative;
+    top: -98px;
+    
+}
+
+.feature-content {
+    margin: auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+}
+
+.content-carrousel {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.content-carrousel figure {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #4d444d;
+    overflow: hidden;
+    position: absolute;
+}
+
+.content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(300px);
+
+}
+.content-carrousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(300px);
+
+}
+.sahdow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000 !important;
+    border-radius: 50% !important;
+}
+.content-carrousel img {
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+}
+.content-carrousel img:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+@keyframes rotar {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+
+/*--------------------------End slideshow---------------------------*/
+
+.services {
+    position: relative;
+    top: -98px;
+}
+.services-heading {
+    font-size: 1.3rem;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    margin-top: 175px;
+    margin-left: 90px;
+    color: lightgray;
+}
+
+.box:hover .services-heading {
+    display: none;
+}
+
+/*-----------------------try after before on box--------------------------*/
+
+.box::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+}
+
+
+/*-----------------------End of try after before on box--------------------------*/
+
+
+/*-----------------------Start Affiliate--------------------------*/
+.affiliate {
+    position: relative;
+    top: -98px;
+}
+
+/*-----------------------End Affiliate--------------------------*/
+
+/*-----------------------Start About US--------------------------*/
+.about {
+    position: relative;
+    top: -98px;
+}
+.start-box {
+    background-image: linear-gradient(57deg, #00c6a7, #1e4d92);
+    height: 100px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+}
+.end-box {
+    background-image: linear-gradient(57deg, #1e4d92, #00c6a7);
+    height: 100px;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.left-border {
+    border-left: 2px solid #818C96;
+    padding-left: 5px;
+   
+
+}
+
+.subscribe-box {
+    padding: 50px 0;
+    background-image: linear-gradient(57deg, #00c6a7, #1e4d92);
+}
+.subscribe-box input {
+    background: transparent;
+}
+.subscribe-box input::placeholder {
+    color: black;
+}
+.subscribe-box .input-group .input-group-text {
+    background: linear-gradient(57deg, #1e4d92, #00c6a7);
+    color: whitesmoke;
+}
+.subscribe-box .input-group .input-group-text:hover{
+    background: transparent;
+    cursor: pointer;
+}
+/*-----------------------End About US-----------------------------*/
+
+.contact {
+    position: relative;
+    top: -98px;
+}
+
+.about-heading, .affiliate-heading, .contact-heading {
+    color: lightgray;
+}
+
+.submit-button {
+    background: linear-gradient(57deg, #00c6a7, #1e4d92);
+    color: whitesmoke;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background: linear-gradient(57deg, #1e4d92, #00c6a7);
+}
+
+.social-link i {
+    font-size: 30px;
+    padding: 0 5px;
+    
+}
+.social-link i:hover {
+    cursor: pointer;
+}
+.social-link i:nth-child(1):hover {
+    color: navy;
+}
+.social-link i:nth-child(2):hover {
+    color: rgba(29,161,242,1.00);
+}
+.social-link i:nth-child(3):hover {
+    color: navy;
+}
+.social-link i:nth-child(4):hover {
+    color: rgba(218,83,92,1);
+}
+
+.close {
+    position: relative;
+    font-size: 30px;
+    color: white !important;
+        
+}
+.modal-close {
+    position: absolute;
+    top: -20px;
+    left: 100%;
+    cursor: pointer !important;
+    padding: 2px;
+}
